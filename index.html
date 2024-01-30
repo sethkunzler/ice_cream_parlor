@@ -9,16 +9,43 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <!-- mdi icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  <!-- bcw style debugger -->
+  <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js" defer></script>
   <!-- my css -->
   <link rel="stylesheet" href="assets/style.css"> 
   <!-- my javascript -->
   <script src="assets/app.js" defer></script>
   <title>Ice Cream Parlor</title>
 </head>
-<body>
+<body class="debug">
   <header></header>
   <main>
-
+    <!-- NOTE Checkout Menu  -->
+    <div class="container checkout-menu">
+      <div class="row">
+        <div class="col-6">
+          <h5>Name</h5>
+        </div>
+        <div class="col-6">
+          <h6>Qty</h6>
+          <h6>Each</h6>
+          <h6>Total</h6>
+        </div>
+        <span id="checkoutWindow">
+          <!-- TODO in here we want javascript to dump in col-12s of items that we've purchased -->
+        </span>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <p>
+            TOTAL: <span id="totalCost"></span>
+          </p>
+          <button class="btn btn-oultine-info">BUY NOW!</button>
+        </div>
+      </div>
+    </div>
+    <!-- Options Menu window -->
+    <div class="container options-menu"></div>
   </main>
   <footer></footer>
 </body>
