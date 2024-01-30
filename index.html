@@ -18,35 +18,84 @@
   <title>Ice Cream Parlor</title>
 </head>
 <body class="debug">
-  <header></header>
-  <main>
-    <!-- NOTE Checkout Menu  -->
-    <div class="container checkout-menu">
-      <div class="row">
-        <div class="col-6">
-          <h5>Name</h5>
-        </div>
-        <div class="col-6">
-          <h6>Qty</h6>
-          <h6>Each</h6>
-          <h6>Total</h6>
-        </div>
-        <span id="checkoutWindow">
-          <!-- TODO in here we want javascript to dump in col-12s of items that we've purchased -->
-        </span>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <p>
-            TOTAL: <span id="totalCost"></span>
-          </p>
-          <button class="btn btn-oultine-info">BUY NOW!</button>
-        </div>
-      </div>
+  <header>
+    <!-- NOTE Header -->
+    <div class="text-center my-4">
+      <h1>Select What You Want to Buy!</h1>
     </div>
-    <!-- Options Menu window -->
-    <div class="container options-menu"></div>
+  </header>
+  <main>
+    <div class="container-fluid d-flex">
+    <section class="row">
+      <!-- SECTION Checkout Menu -->
+      <div class="col-6">
+        <div class="container">
+          <!-- Title row -->
+          <section class="row">
+            <div class="col-6">
+              <h4>
+                Product
+              </h4>
+            </div>
+            <div class="col-6 d-flex justify-content-between">
+              <h5>
+                Qty.
+              </h5>
+              <h5>
+                Each
+              </h5>
+              <h5>
+                Price
+              </h5>
+            </div>
+          </section>
+          <!-- Display Items row -->
+          <section id="checkoutWindow" class="row checkout-window">
+            <!-- TODO Javascript dumps col-12s in here listing items and their prices -->
+          </section>
+          <!-- Total Price - Ending Row -->
+          <section class="row">
+            <div class="col-12 text-end">
+              <h3>TOTAL: $
+                <span id="totalCost">
+                  <!-- TODO Javascript dumps in the total cost number -->
+                </span>
+              </h3>
+              <button onclick="buyNow()" type="button" class="btn btn-outline-info">BUY NOW!</button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- !SECTION -->
+      <!-- SECTION Options Menu-->
+      <div class="col-6">
+        <div class="container">
+          <!-- Cone Type row -->
+          <section class="row">
+            <!-- row Heading -->
+            <div class="col-12">
+              <h2>
+                Cone Type
+              </h2>
+            </div>
+            <!-- Waffle Cone Product Card -->
+            <div class="col-4">
+              <div onclick="addToCart(`waffle cone`)" class="card">
+                <img src="https://images.unsplash.com/photo-1559703248-dcaaec9fab78?q=80&w=3648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="waffle cone">
+                <p>
+                  waffle cone $4
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- !SECTION -->
+    </section>
+    </div>
   </main>
-  <footer></footer>
+  <footer>
+
+  </footer>
 </body>
 </html>

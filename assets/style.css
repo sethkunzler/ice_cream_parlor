@@ -1,1 +1,25 @@
 /* my css */
+:root {
+  --bg-body-color: #FFF3C8;
+  --bg-product-card-color: #FFF2F8;
+  --text-product-card-color: #D08C98;
+  --bg-checkout-menu-color: #CBCBCB;
+}
+.checkout-menu {
+  background-color: var(--bg-checkout-menu-color);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-body-color);
+}
+
+.card {
+  background-color: var(--bg-product-card-color);
+  color: var(--text-product-card-color);
+  font-family: 'Patrick Hand SC', sans-serif;
+}
+
+div.card img {
+height: fit-content;
+}
