@@ -21,5 +21,6 @@ body {
 }
 
 div.card img {
-height: fit-content;
+height: 20vh;
+object-fit: cover;
 }
